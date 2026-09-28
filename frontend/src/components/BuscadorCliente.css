@@ -1,3 +1,6 @@
+/* =========================================================
+   BUSCADOR DE CLIENTE
+========================================================= */
 .buscador-cliente {
   position: relative;
   width: 100%;
@@ -5,147 +8,371 @@
 
 .buscador-cliente-input-contenedor {
   position: relative;
+  width: 100%;
 }
 
+/* =========================================================
+   INPUT
+========================================================= */
 .buscador-cliente-input-contenedor input {
-  width: 100%;
   box-sizing: border-box;
-  padding: 10px 40px 10px 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  font-size: 14px;
-  background: white;
+width: 100%;
+  height: 38px;
+
+  padding: 0 38px 0 11px;
+
+  border: 1px solid #e6e1ec;
+  border-radius: 8px;
+
+  background: #fbfaff;
+  color: #4e4757;
+
+  font-size: 11px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.buscador-cliente-input-contenedor input::placeholder {
+  color: #aaa4b2;
 }
 
 .buscador-cliente-input-contenedor input:focus {
-  outline: none;
-  border-color: #2563eb;
+  border-color: #a78bfa;
+  
+    background: #ffffff;
+  
+    box-shadow:
+      0 0 0 3px rgba(139, 92, 246, 0.08);
 }
 
+/* =========================================================
+   LIMPIAR INPUT
+========================================================= */
 .buscador-cliente-limpiar {
   position: absolute;
+top: 50%;
   right: 10px;
-  top: 50%;
+
   transform: translateY(-50%);
 
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 24px;
+    height: 24px;
+  
+    padding: 0;
   border: none;
+  border-radius: 6px;
   background: transparent;
+  color: #aaa4b2;
+  
+    font-size: 17px;
   cursor: pointer;
 
-  font-size: 20px;
-  color: #6b7280;
+  transition:
+      background 0.2s ease,
+      color 0.2s ease;
 }
 
+.buscador-cliente-limpiar:hover {
+  background: #f1eafe;
+  color: #7c3aed;
+}
+
+
+/* =========================================================
+   RESULTADOS
+========================================================= */
 .buscador-cliente-resultados {
   position: absolute;
-  top: calc(100% + 5px);
+top: calc(100% + 6px);
   left: 0;
   right: 0;
 
-  max-height: 250px;
-  overflow-y: auto;
-
-  background: white;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-
   z-index: 1000;
+
+  max-height: 240px;
+
+  border: 1px solid #e6e1ec;
+    border-radius: 10px;
+
+  background: #ffffff;
+  
+    box-shadow:
+      0 12px 30px rgba(51, 38, 70, 0.12);
+  
+    overflow-y: auto;
 }
 
+/* =========================================================
+   RESULTADO INDIVIDUAL
+========================================================= */
 .buscador-cliente-resultado {
-  width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
+  width: 100%;
+  
+    gap: 3px;
   padding: 10px 12px;
 
   border: none;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f4f1f6;
 
-  background: white;
-  cursor: pointer;
+  background: #ffffff;
 
   text-align: left;
+cursor: pointer;
+
+  transition: background 0.15s ease;
+}
+
+.buscador-cliente-resultado:last-child {
+  border-bottom: none;
 }
 
 .buscador-cliente-resultado:hover {
-  background: #f8fafc;
+  background: #faf7ff;
 }
 
 .buscador-cliente-resultado strong {
-  font-size: 14px;
-  color: #111827;
+  color: #423b4a;
+  
+    font-size: 11px;
+    font-weight: 600;
 }
 
 .buscador-cliente-resultado span {
-  margin-top: 2px;
-  font-size: 12px;
-  color: #6b7280;
+  margin: 0;
+  
+    color: #aaa4b2;
+  
+    font-size: 10px;
 }
 
+/* =========================================================
+   MENSAJES
+========================================================= */
 .buscador-cliente-mensaje {
-  padding: 12px;
-  font-size: 14px;
-  color: #6b7280;
+  padding: 13px;
+  
+    color: #aaa4b2;
+  
+    font-size: 11px;
+  
+    text-align: center;
 }
 
+/* =========================================================
+   CLIENTE SELECCIONADO
+========================================================= */
 .cliente-seleccionado {
-  margin-top: 8px;
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+width: 100%;
+  box-sizing: border-box;
+
+  gap: 15px;
 
   padding: 10px 12px;
 
-  border: 1px solid #dbeafe;
-  border-radius: 6px;
+  border: 1px solid #e8ddfc;
+    border-radius: 9px;
 
-  background: #eff6ff;
+  background: #fbf9ff;
 }
 
+.cliente-seleccionado-info,
 .cliente-seleccionado div {
   display: flex;
   flex-direction: column;
+min-width: 0;
+
+  gap: 2px;
 }
 
 .cliente-seleccionado strong {
-  font-size: 14px;
+  color: #423b4a;
+  
+    font-size: 11px;
+    font-weight: 600;
 }
 
 .cliente-seleccionado span {
-  margin-top: 2px;
-  font-size: 12px;
-  color: #6b7280;
+  margin: 0;
+  
+    color: #9690a0;
+  
+    font-size: 10px;
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .cliente-seleccionado button {
+  flex-shrink: 0;
+  
+    padding: 6px 9px;
   border: none;
-  background: transparent;
+  border-radius: 7px;
+  
+    background: #f1eafe;
+    color: #7c3aed;
 
-  color: #2563eb;
+  font-size: 10px;
   font-weight: 600;
 
   cursor: pointer;
+transition: background 0.2s ease;
 }
 
+.cliente-seleccionado button:hover {
+  background: #e8ddfc;
+}
+
+
+/* =========================================================
+   CONSUMIDOR FINAL - OPCIÓN ANTIGUA
+========================================================= */
 .consumidor-final-opcion {
+  width: 100%;
   margin-top: 8px;
-  padding: 8px 12px;
+  padding: 9px 11px;
+  
+    border: 1px solid #e8ddfc;
+    border-radius: 8px;
+  
+    background: #fbf9ff;
+    color: #5f5868;
+  
+    font-size: 11px;
+    font-weight: 500;
 
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+  text-align: left;
 
-  background: white;
   cursor: pointer;
 
-  font-size: 13px;
+  transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
 }
 
 .consumidor-final-opcion:hover {
-  background: #f8fafc;
+  border-color: #c4b5fd;
+  
+    background: #f5f3ff;
+    color: #7c3aed;
+  }
+  
+  
+  /* =========================================================
+     CONSUMIDOR FINAL - TARJETA
+  ========================================================= */
+  
+  .consumidor-final-card {
+    display: flex;
+    align-items: center;
+  
+    box-sizing: border-box;
+    width: 100%;
+  
+    gap: 11px;
+  
+    margin-top: 9px;
+    padding: 10px 12px;
+  
+    border: 1px solid #e8ddfc;
+    border-radius: 9px;
+  
+    background: #fbf9ff;
+  
+    text-align: left;
+  
+    cursor: pointer;
+  
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  
+  .consumidor-final-card:hover {
+    border-color: #c4b5fd;
+  
+    background: #f5f3ff;
+  
+    transform: translateY(-1px);
+  }
+  
+  .consumidor-final-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 24px;
+    height: 24px;
+  
+    flex-shrink: 0;
+  
+    border-radius: 50%;
+  
+    background: #8b5cf6;
+    color: #ffffff;
+  
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  .consumidor-final-texto {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 2px;
+  }
+  
+  .consumidor-final-texto strong {
+    color: #423b4a;
+  
+    font-size: 11px;
+    font-weight: 600;
+  }
+  
+  .consumidor-final-texto small {
+    color: #aaa4b2;
+  
+    font-size: 10px;
+  }
+  
+  
+  /* =========================================================
+     SCROLL RESULTADOS
+  ========================================================= */
+  
+  .buscador-cliente-resultados::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .buscador-cliente-resultados::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .buscador-cliente-resultados::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  
+    background: #ddd6e8;
+  }
+  
+  .buscador-cliente-resultados::-webkit-scrollbar-thumb:hover {
+    background: #c4b5fd;
 }
