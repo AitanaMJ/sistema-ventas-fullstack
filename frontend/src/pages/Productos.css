@@ -1,0 +1,263 @@
+.productos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.productos-header h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.productos-header p {
+  color: #6b7280;
+}
+
+.btn-nuevo {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.productos-tabla {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.productos-tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productos-tabla th {
+  text-align: left;
+  color: #6b7280;
+  font-size: 13px;
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.productos-tabla td {
+  padding: 15px 13px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.btn-editar,
+.btn-desactivar,
+.btn-activar {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.btn-editar {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.btn-editar:hover {
+  background: #dbeafe;
+}
+
+.btn-desactivar {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.btn-activar {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+
+/* ESTADO DEL PRODUCTO */
+
+.estado {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.estado.activo {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.estado.inactivo {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.modal-fondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  padding: 24px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.modal-cerrar {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin-bottom: 18px;
+}
+
+.form-grupo label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-grupo input {
+  padding: 11px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.form-grupo input:focus {
+  border-color: #2563eb;
+}
+
+.modal-acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.btn-cancelar,
+.btn-guardar {
+  border: none;
+  border-radius: 7px;
+
+  padding: 10px 16px;
+
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-cancelar {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn-guardar {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-guardar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+.productos-filtros {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buscar-producto {
+  width: 320px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.buscar-producto:focus {
+  border-color: #2563eb;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.paginacion button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.paginacion button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.paginacion span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  padding: 0 5px;
+}

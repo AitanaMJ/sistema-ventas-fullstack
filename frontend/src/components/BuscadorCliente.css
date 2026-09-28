@@ -1,0 +1,151 @@
+.buscador-cliente {
+  position: relative;
+  width: 100%;
+}
+
+.buscador-cliente-input-contenedor {
+  position: relative;
+}
+
+.buscador-cliente-input-contenedor input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+.buscador-cliente-input-contenedor input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.buscador-cliente-limpiar {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.buscador-cliente-resultados {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+
+  max-height: 250px;
+  overflow-y: auto;
+
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+}
+
+.buscador-cliente-resultado {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 10px 12px;
+
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+
+  background: white;
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.buscador-cliente-resultado:hover {
+  background: #f8fafc;
+}
+
+.buscador-cliente-resultado strong {
+  font-size: 14px;
+  color: #111827;
+}
+
+.buscador-cliente-resultado span {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.buscador-cliente-mensaje {
+  padding: 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.cliente-seleccionado {
+  margin-top: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 12px;
+
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+
+  background: #eff6ff;
+}
+
+.cliente-seleccionado div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cliente-seleccionado strong {
+  font-size: 14px;
+}
+
+.cliente-seleccionado span {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.cliente-seleccionado button {
+  border: none;
+  background: transparent;
+
+  color: #2563eb;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.consumidor-final-opcion {
+  margin-top: 8px;
+  padding: 8px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  background: white;
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+.consumidor-final-opcion:hover {
+  background: #f8fafc;
+}

@@ -1,0 +1,144 @@
+.clientes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.clientes-header h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.clientes-header p {
+  color: #6b7280;
+}
+
+.btn-nuevo-cliente {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-nuevo-cliente:hover {
+  background: #1d4ed8;
+}
+
+
+.clientes-tabla {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.clientes-filtros {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buscar-cliente {
+  width: 320px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.buscar-cliente:focus {
+  border-color: #2563eb;
+}
+
+
+.clientes-tabla table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clientes-tabla th {
+  text-align: left;
+  color: #6b7280;
+  font-size: 13px;
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.clientes-tabla td {
+  padding: 15px 13px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+
+.btn-editar-cliente {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.btn-editar-cliente:hover {
+  background: #dbeafe;
+}
+
+
+.cargando-clientes {
+  text-align: center;
+  padding: 25px !important;
+  color: #6b7280;
+}
+
+.sin-clientes {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+.clientes-error {
+  color: #dc2626;
+  margin-bottom: 15px;
+}
+
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.paginacion button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.paginacion button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.paginacion span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+}
